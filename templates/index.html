@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Vorfragebogen</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}">
+  </head>
+  <body>
+    <div style="display:flex;justify-content:center;align-items:center;">
+      <div>
+          <img src="{{ url_for('static', filename = 'vereinbarung.png') }}" style="height: 70vh; margin-bottom: 30px;">
+          <div style="display:flex;justify-content:center">
+            <div>
+              <form action="/print/index" method="POST">
+                <div>
+                  <label for="firstname">Vorname</label>
+                  <input id="firstnameField" name="firstname" placeholder="Vorname" required>
+                </div>
+                <br>
+                <div>
+                  <label for="lastname">Nachname</label>
+                  <input id="lastnameField" name="lastname" placeholder="Nachname" required>
+                </div>
+                <br>
+                <div>
+                  <label for="accept">Ich stimme der Vereinbarung zu</label>
+                  <input type="checkbox" id="accept" name="accept" required>
+                </div>
+                <br>
+                <button type="submit">Weiter</button>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+click==6.7
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+numpy
+Werkzeug==0.12.2
+tinydb
+
+
+opencv-python==3.4.6.27
+picamera==1.13
+
+#sudo apt-get install libcups2-dev
+pycups

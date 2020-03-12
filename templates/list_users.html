@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Alle Nutzer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/table.css') }}">
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/users.js') }}" ></script>
+  </head>
+  <body>
+    <div style="display:flex;justify-content:center;align-items:center;">
+      <div>
+          <h1>Alle Nutzer</h1>
+          <table>
+            <tr>
+              <th>
+                Vorname
+              </th>
+              <th>
+                Nachname
+              </th>
+              <th>
+                Dateiname
+              </th>
+            </tr>
+
+            {% for user in users %}
+            <tr>
+              <td>
+                {{ user.firstname }}
+              </td>
+              <td>
+                {{ user.lastname }}
+              </td>
+              <td>
+                <a href="{{ url_for('static', filename = 'pictures/' + user.filename) }}">{{ user.filename }}</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+          <button onclick="deleteAll()" style="margin-top: 30px;">Alle Bilder und Einträge löschen</button>
+      </div>
+    </div>
+  </body>
+</html>
