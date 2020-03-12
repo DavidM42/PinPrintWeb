@@ -22,7 +22,7 @@ RUN_PATH = os.path.dirname(os.path.realpath(__file__))
 
 # probably not change
 # is linked in many places
-BASE_PATH = RUN_PATH + 'static/pictures/'
+BASE_PATH = RUN_PATH + '/static/pictures/'
 
 #arbitrary filename as fallback for files
 FILENAME = "web.jpg"
@@ -112,7 +112,7 @@ def printFrame():
     print_id = conn.printFile(PRINTER_NAME, path, "Projekt Webcam Print", {"media": "Custom.8.5x8.5cm"})
 
 
-    return "sucess"
+    return "success"
     # wait for job
     # from time import sleep
     # while conn.getJobs().get(print_id, None):
