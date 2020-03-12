@@ -18,9 +18,11 @@ except:
     print("Creating opencv fallback cam")
     from pythonCam.camera_opencv import Camera
 
+RUN_PATH = os.path.dirname(os.path.realpath(__file__))
+
 # probably not change
 # is linked in many places
-BASE_PATH = 'static/pictures/'
+BASE_PATH = RUN_PATH + 'static/pictures/'
 
 #arbitrary filename as fallback for files
 FILENAME = "web.jpg"
@@ -29,7 +31,7 @@ FILENAME = "web.jpg"
 PRINTER_NAME = "HP"
 
 # init mock db
-db = TinyDB('./users.json')
+db = TinyDB(RUN_PATH + '/users.json')
 
 app = Flask(__name__)
 
